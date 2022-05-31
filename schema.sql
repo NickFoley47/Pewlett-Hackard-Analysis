@@ -6,6 +6,7 @@ CREATE TABLE departments  (
      UNIQUE (dept_name)
 	
 );
+
 --Confirm the tables were created successfully
 SELECT * FROM departments;
 
@@ -19,6 +20,7 @@ Create Table employees (
      hire_date DATE NOT NULL,
      PRIMARY KEY (emp_no)
 );
+
 --Confirm the tables were created successfully
 SELECT * FROM employees;
 
@@ -32,6 +34,7 @@ CREATE TABLE dept_manager (
 	FOREIGN KEY (dept_no) REFERENCES departments (dept_no),	
     PRIMARY KEY (emp_no, dept_no)
 );
+
 --Confirm the tables were created successfully
 SELECT * FROM dept_manager;
 
@@ -44,6 +47,7 @@ CREATE TABLE salaries (
   	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
  	PRIMARY KEY (emp_no)
 );
+
 --Confirm the tables were created successfully
 SELECT * FROM salaries;
 
@@ -56,6 +60,7 @@ Create Table titles (
 	FOREIGN KEY  (emp_no) REFERENCES employees (emp_no),
 	PRIMARY KEY (emp_no, title, from_date)
 );
+
 --Confirm the tables were created successfully
 SELECT * FROM titles;
 -- Creating tables for PH-EmployeeDB
@@ -70,4 +75,3 @@ Create Table Dept_Emp (
 );
 --Confirm the tables were created successfully
 SELECT * FROM Dept_Emp;
-DROP TABLE titles CASCADE;
