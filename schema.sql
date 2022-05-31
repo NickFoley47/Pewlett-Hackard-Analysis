@@ -54,14 +54,14 @@ Create Table titles (
 	from_date DATE NOT null,
 	to_date DATE NOT null,
 	FOREIGN KEY  (emp_no) REFERENCES employees (emp_no),
-	PRIMARY KEY (emp_no)
+	PRIMARY KEY (emp_no, title, from_date)
 );
 --Confirm the tables were created successfully
 SELECT * FROM titles;
 -- Creating tables for PH-EmployeeDB
 Create Table Dept_Emp (
+	emp_no INT NOT NULL,
 	dept_no VARCHAR(4) NOT NULL,
-    emp_no INT NOT NULL,
 	from_date DATE NOT NULL,
   	to_date DATE NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
@@ -70,3 +70,4 @@ Create Table Dept_Emp (
 );
 --Confirm the tables were created successfully
 SELECT * FROM Dept_Emp;
+DROP TABLE titles CASCADE;
