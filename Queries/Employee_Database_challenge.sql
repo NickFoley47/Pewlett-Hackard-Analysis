@@ -23,20 +23,19 @@ title
 INTO unique_titles
 FROM retirement_titles 
 WHERE to_date = ('9999-01-01')
-ORDER BY emp_no ASC, to_date DESC;
+ORDER BY emp_no ASC, 
+		to_date DESC;
 
 
 -- Counting number of employees job title who are about to retire
 SELECT COUNT(title),
 title
---INTO retiring_titles
+INTO retiring_titles
 FROM unique_titles
 GROUP BY title
 ORDER BY COUNT DESC;
 
 --Deliverable 2: The Employees Eligible for the Mentorship Program 
-
---Create a new table with employees table, dept_emp, and title
 SELECT DISTINCT ON (emp.emp_no) emp.emp_no,
 	emp.first_name,
 	emp.last_name,
@@ -52,5 +51,16 @@ WHERE emp.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
 AND dept.to_date = ('9999-01-01') 
 ORDER BY emp.emp_no;
 
+-- Two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
+
+-- Sales employees retiring
+SELECT ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	d.dept_name
+FROM retirement_info AS ri
+INNER JOIN dept_emp AS de ON ri.emp_no= de.emp_no
+INNER JOIN departments AS D ON d.dept_no = de.dept_no
+WHERE d.dept_name IN ('Sales');
 
 
