@@ -3,8 +3,9 @@
 ## Project Overview
 Pewlett-Hackard have many employees approaching the retirement age for their career and will cause a high amount of job openings within the company. This can cause Pewlett-Hackard to have an employee shortage within different departments. Bobby’s manager wanted us to determine the number of retiring employees per title and identify employees who are eligible to participate in a mentorship program. The mentorship program would allow Pewlett-Hackard to train in house employees with the retiring employees. 
 ## Resources
--Data Source: mentorship_eligibilty.csv, retirement_titles.csv, retiring_titles.csv, unique_titles.csv
--Software: PostgreSQL 12.11.1, pgAdmin 4
+- Data Source: mentorship_eligibilty.csv, retirement_titles.csv, retiring_titles.csv, unique_titles.csv
+
+- Software: PostgreSQL 12.11.1, pgAdmin 4
 	
 ## Results:
 
