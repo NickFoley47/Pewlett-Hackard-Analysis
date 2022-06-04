@@ -23,8 +23,7 @@ title
 INTO unique_titles
 FROM retirement_titles 
 WHERE to_date = ('9999-01-01')
-ORDER BY emp_no ASC, 
-		to_date DESC;
+ORDER BY emp_no ASC, to_date DESC;
 
 
 -- Counting number of employees job title who are about to retire
