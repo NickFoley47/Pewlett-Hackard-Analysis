@@ -51,7 +51,6 @@ WHERE emp.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
 AND dept.to_date = ('9999-01-01') 
 ORDER BY emp.emp_no;
 
--- Two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
 
 -- Sales employees retiring
 SELECT ri.emp_no,
