@@ -9,7 +9,7 @@ Pewlett-Hackard have many employees approaching the retirement age for their car
 ## Results:
 
 - We first determined who was eligible for retirement and what job they were working. As you can determine by our table, some employees have changed positions throughout the years. This gives us repeats of the same employee as they transition to different titles throughout their career at Pewlett-Hackard.
-- 
+
 Employees eligible for retirement: 
 
 ![Retirement-Titles]( https://github.com/NickFoley47/Pewlett-Hackard-Analysis/blob/main/Pics%20of%20Data/Retirement-Titles.PNG)
